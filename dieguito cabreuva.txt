@@ -1,0 +1,25 @@
+package sample;
+
+import robocode.*;
+import java.awt.Color;
+
+public class PinkMovementRobot extends Robot {
+    
+    public void run() {
+        // Define a cor do robô para rosa
+        setBodyColor(Color.PINK);
+        
+        // Define a velocidade do robô
+        setMaxVelocity(8);
+
+        // Loop infinito para movimentar o robô continuamente
+        while (true) {
+            ahead(100); // Move para frente
+            back(100); // Move para trás
+            turnRight(90); // Vira 90 graus para a direita
+            ahead(100); // Move para frente
+            back(100); // Move para trás
+            turnLeft(90); // Vira 90 graus para a esquerda
+        }
+    }
+}
